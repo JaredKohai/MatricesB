@@ -1,5 +1,4 @@
-﻿using System;
-using System.Globalization;
+﻿using System; //
 
 namespace MatricesB
 {
@@ -54,14 +53,14 @@ namespace MatricesB
                     Console.WriteLine("1. Suma");
                     Console.WriteLine("2. Resta");
                     Console.WriteLine("3. Multiplicación");
-                    Console.WriteLine("4.- Dividir");
+                    Console.WriteLine("4. Dividir");
                     Console.WriteLine("<--------------------------------->".PadLeft(80));
                     Console.WriteLine("5. Regresar a matriz original");
                     Console.WriteLine("6. Calcular otras matrices");
                     Console.WriteLine("7. Salir");
                     int opcion = Convert.ToInt32(Console.ReadLine());
 
-                    if (opcion ==7)
+                    if (opcion == 7)
                         break;
 
                     if (opcion == 5)
@@ -107,16 +106,15 @@ namespace MatricesB
         static Matriz CrearMatrizCO()
         {
             Console.WriteLine("Número 1: ");
-            int elemento1 = Convert.ToInt32(Console.ReadLine());
+            double elemento1 = Convert.ToDouble(Console.ReadLine()); 
             Console.WriteLine("Número 2: ");
-            int elemento2 = Convert.ToInt32(Console.ReadLine());
+            double elemento2 = Convert.ToDouble(Console.ReadLine()); 
             Console.WriteLine("Número 3: ");
-            int elemento3 = Convert.ToInt32(Console.ReadLine());
+            double elemento3 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Número 4: ");
-            int elemento4 = Convert.ToInt32(Console.ReadLine());
+            double elemento4 = Convert.ToDouble(Console.ReadLine());
 
-            int[,] matriz = { { elemento1, elemento2 },
-                              { elemento3, elemento4 } };
+            double[,] matriz = { { elemento1, elemento2 }, { elemento3, elemento4 } };
             return new Matriz(matriz);
         }
 
@@ -142,6 +140,4 @@ namespace MatricesB
             }
         }
     }
-
-
 }
